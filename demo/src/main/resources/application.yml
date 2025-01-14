@@ -1,13 +1,17 @@
+server:
+  port: 8080
 spring:
   application:
     name:
       demo
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: person
 management:
   endpoints:
     web:
       exposure:
         include:
         - '*'
-person-service:
-  name: "Hello"
-  defaultValue: "Mundo"
