@@ -1,0 +1,13 @@
+spring:
+  application:
+    name:
+      demo
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+person-service:
+  name: "Fala"
+  defaultValue: "Macacada"
